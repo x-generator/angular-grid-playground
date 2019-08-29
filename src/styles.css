@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./assets/font/Roboto/Roboto-Regular.ttf");
+}
+
+body, html {
+  margin: 0;
+  font-family: Roboto-Regular, "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

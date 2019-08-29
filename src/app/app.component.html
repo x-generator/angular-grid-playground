@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="header" style="text-align: center; margin-top: 45px">
+  <span style="padding-bottom: 15px; border-bottom: 1px solid rgb(88, 89, 91); font-size: 22px;">
+    Business type
+  </span>
+</div>
+
+<div style="text-align: center; margin-top: 45px">
+  <span style="font-size: 16px;">Select you business type to prepare your point of sale</span>
+</div>
+
+<div id="business-type-container" style="width: 70%; display: table; vertical-align: middle; height: 100%; margin: auto;">
+  <mat-grid-list cols="3" rowHeight="200px" [gutterSize]="'35px'" style="margin-top: 50px">
+    <mat-grid-tile id="business-type"
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      style="border: 1px solid #e0e2e3; border-radius: 5px;"
+      [style.background]="!tile.enabled ? 'rgb(224,224,224)' : ''"
+      [style.cursor]="tile.enabled ? 'pointer' : ''">
+      <mat-grid-tile-header style="height: 40px">
+        <div style="position: relative; float: left; top: 25%; left: 50%; transform: translate(-50%, -50%);">{{tile.type}}</div>
+      </mat-grid-tile-header>
+      <mat-icon style="position: relative; top: 15px; transform: scale(4);" svgIcon="{{tile.icon}}"></mat-icon>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<router-outlet></router-outlet>
